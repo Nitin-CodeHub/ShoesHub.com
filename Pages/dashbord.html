@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<h2>Dashboard</h2>
+<p id="welcome"></p>
+
+<button onclick="logout()">Logout</button>
+
+<script>
+  const supabase = window.supabase.createClient(
+    "https://YOUR_PROJECT_ID.supabase.co",
+    "YOUR_ANON_PUBLIC_KEY"
+  );
+
+  async function loadUser() {
+    const { data } = await supabase.auth.getUser();
+
+    if (!data.user) {
+      alert("Please login first");
+      window.location.href = "login.html";
+    } else {
+      const name = data.user.user_metadata.full_name;
+      document.getElementById("welcome").innerText =
+        "Welcome, " + name;
+    }
+  }
+
+  async function logout() {
+    await supabase.auth.signOut();
+    window.location.href = "login.html";
+  }
+
+  loadUser();
+</script>
+
+</body>
+</html>

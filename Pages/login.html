@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login / Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <link rel="stylesheet" href="/src/login.css">
+</head>
+<body>
+
+<div class="auth-container">
+  <div class="auth-card">
+    <h2 id="title">Sign In</h2>
+    <p id="subtitle">Welcome back 👋</p>
+
+    <!-- Name (only signup) -->
+    <input type="text" id="name" placeholder="Full Name" style="display:none">
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="handleAuth()" id="mainBtn">Sign In</button>
+
+    <p class="toggle-text" id="toggleText">
+      Don’t have an account?
+      <span onclick="toggleMode()">Sign Up</span>
+    </p>
+
+    <p id="msg" class="msg"></p>
+  </div>
+</div>
+
+<script>
+/* ================================
+   SUPABASE SETUP (ONLY ONCE)
+================================ */
+const supabaseClient = window.supabase.createClient(
+  "https://ywyjkeernfunvxdxrsmm.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3eWprZWVybmZ1bnZ4ZHhyc21tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY5MDk2MTksImV4cCI6MjA4MjQ4NTYxOX0.ALqxNtV1afeKRdDpJ7sVfSjCISB4Ia7leGjLn-zMDdY"
+);
+
+let isSignup = false;
+
+/* ================================
+   TOGGLE SIGN IN / SIGN UP
+================================ */
+function toggleMode() {
+  isSignup = !isSignup;
+
+  document.getElementById("title").innerText =
+    isSignup ? "Sign Up" : "Sign In";
+
+  document.getElementById("subtitle").innerText =
+    isSignup ? "Create your account 🚀" : "Welcome back 👋";
+
+  document.getElementById("mainBtn").innerText =
+    isSignup ? "Create Account" : "Sign In";
+
+  document.getElementById("name").style.display =
+    isSignup ? "block" : "none";
+
+  document.getElementById("toggleText").innerHTML =
+    isSignup
+      ? `Already have an account? <span onclick="toggleMode()">Sign In</span>`
+      : `Don’t have an account? <span onclick="toggleMode()">Sign Up</span>`;
+}
+
+/* ================================
+   SIGN IN / SIGN UP HANDLER
+================================ */
+async function handleAuth() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const name = document.getElementById("name").value;
+
+  if (isSignup) {
+    if (!name) return showMsg("Please enter your name");
+
+    const { error } = await supabaseClient.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { full_name: name }
+      }
+    });
+
+    showMsg(error ? error.message : "Signup successful!");
+  } else {
+    const { error } = await supabaseClient.auth.signInWithPassword({
+      email,
+      password
+    });
+
+    showMsg(error ? error.message : "Login successful!");
+  }
+}
+
+/* ================================
+   MESSAGE DISPLAY
+================================ */
+function showMsg(text) {
+  document.getElementById("msg").innerText = text;
+}
+</script>
+
+</body>
+</html>

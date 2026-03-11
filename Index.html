@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./Assets/logo.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="/src/Shoeshub.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <title>ShoesHub</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="brand">ShoesHub</div>
+
+        <nav class="navbar" aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="/Pages/shop.html">Shop Now</a></li>
+            <li><a href="/Pages/about.html">About</a></li>
+            <li><a href="/Pages/contact.html">Contact Us</a></li>
+            <a href="/Pages/login.html" aria-label="User Profile"
+              ><i
+                class="bi bi-person-circle"
+                style="font-size: 1.8rem; color: rgb(231, 203, 203)"
+              ></i
+            ></a>
+          </ul>
+        </nav>
+
+        <button class="hamburger" aria-label="Open menu" id="openMenu">
+          &#9776;
+        </button>
+      </div>
+
+      <div class="banner">
+        <a href="/Pages/shop.html"
+          ><img
+            class="frame"
+            src="/Assets/frame.webp"
+            alt="web-banner"
+            srcset=""
+        /></a>
+      </div>
+    </header>
+
+    <aside
+      class="panel"
+      id="sidePanel"
+      aria-hidden="true"
+      aria-label="Mobile menu"
+    >
+      <button class="close-btn" id="closeMenu" aria-label="Close menu">
+        &times;
+      </button>
+
+      <ul class="panel-links">
+        <a href="/Pages/login.html" aria-label="User Profile"
+          ><i
+            class="bi bi-person-circle"
+            style="font-size: 3.8rem; color: rgb(231, 203, 203)"
+          ></i
+        ></a>
+
+        <li><a href="">Home</a></li>
+        <li><a href="/Pages/shop.html">Shop Now</a></li>
+        <li><a href="/Pages/about.html">About</a></li>
+        <li><a href="/Pages/contact.html">Contact Us</a></li>
+      </ul>
+    </aside>
+    <main>
+      <div class="shop-section">
+        <!-- Product 1 -->
+
+        <div class="box">
+          <div class="box-content">
+            <h2>Nike Air Zoom</h2>
+            <div
+              class="box-image"
+              style="background-image: url(&quot;/Assets/amz1.webp&quot;)"
+            ></div>
+            <p>Price: ₹1999</p>
+            <button
+              class="add-cart"
+              onclick="addToCart('Nike Air Zoom', 1999, '/Assets/amz1.webp')"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+
+        <div class="box">
+          <div class="box-content">
+            <h2>Nike Revolution</h2>
+            <div
+              class="box-image"
+              style="background-image: url(&quot;/Assets/amz2.webp&quot;)"
+            ></div>
+            <p>Price: ₹2499</p>
+            <button
+              class="add-cart"
+              onclick="addToCart('Nike Revolution', 2499, '/Assets/amz2.webp')"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+
+        <div class="box">
+          <div class="box-content">
+            <h2>Nike Air Max 90</h2>
+            <div
+              class="box-image"
+              style="background-image: url(&quot;/Assets/amz3.webp&quot;)"
+            ></div>
+            <p>Price: ₹2499</p>
+            <button
+              class="add-cart"
+              onclick="addToCart('Nike Air Max 90', 2499, '/Assets/amz3.webp')"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+
+        <div class="box">
+          <div class="box-content">
+            <h2>Nike Air Max 97</h2>
+            <div
+              class="box-image"
+              style="background-image: url(&quot;/Assets/amz4.webp&quot;)"
+            ></div>
+            <p>Price: ₹2499</p>
+            <button
+              class="add-cart"
+              onclick="addToCart('Nike Air Max 97', 2499, '/Assets/amz4.webp')"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+
+        <div class="box">
+          <div class="box-content">
+            <h2>Nike Free Run 5.0</h2>
+            <div
+              class="box-image"
+              style="background-image: url(&quot;/Assets/amz5.webp&quot;)"
+            ></div>
+            <p>Price: ₹2499</p>
+            <button
+              class="add-cart"
+              onclick="
+                addToCart('Nike Free Run 5.0', 2499, '/Assets/amz5.webp')
+              "
+            >
+              <i class="fa-solid fa-cart-shopping"></i>Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 6-->
+
+        <div class="box">
+          <div class="box-content">
+            <h2>Nike Metcon 9</h2>
+            <div
+              class="box-image"
+              style="background-image: url(&quot;/Assets/amz6.webp&quot;)"
+            ></div>
+            <p>Price: ₹2499</p>
+            <button
+              class="add-cart"
+              onclick="addToCart('Nike Metcon 9', 2499, '/Assets/amz6.webp')"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+
+        <div class="box">
+          <div class="box-content">
+            <h2>Nike GT Cut 2</h2>
+            <div
+              class="box-image"
+              style="background-image: url(&quot;/Assets/amz7.webp&quot;)"
+            ></div>
+            <p>Price: ₹2499</p>
+            <button
+              class="add-cart"
+              onclick="addToCart('Nike GT Cut 2', 2499, '/Assets/amz7.webp')"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- product8 -->
+
+        <div class="box">
+          <div class="">
+            <h2>Nike LeBron 21</h2>
+            <div
+              class="box-image"
+              style="background-image: url(&quot;/Assets/photo13.webp&quot;)"
+            ></div>
+            <p>Price: ₹2499</p>
+            <button
+              class="add-cart"
+              onclick="addToCart('Nike LeBron 21', 2499, '/Assets/photo3.webp')"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      
+        <div class="footer-link">
+          <ul>
+            <h3 style="color: white">Quick Links</h3>
+            <a href=""><li>Home</li></a>
+            <a href=""><li>About</li></a>
+            <a href=""><li>contect</li></a>
+            <a href=""><li>ShopNow</li></a>
+          </ul>
+        </div>
+        <div class="community">
+          <ul>
+            <h3 style="color: white">Community</h3>
+            <a href=""> <li>Issues</li></a>
+            <a href=""> <li>Support</li></a>
+            <a href=""> <li>Privacy Policy</li></a>
+            <a href=""> <li>Terms & Conditions</li></a>
+          </ul>
+        </div>
+        <div class="social-link">
+          <h3>Social Media</h3>
+          <br />
+          <div class="link">
+            <a href=""> <i class="bi bi-facebook ,icon"></i></a>
+            <a href=""> <i class="bi bi-instagram , icon"></i></a>
+            <a href=""> <i class="bi bi-youtube , icon"></i></a>
+            <a href=""> <i class="bi bi-globe , icon"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-end">
+        <p>&COPY; 2026 ShoesHub.All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+  <script src="/src/Shoeshub.js"></script>
+</html>
