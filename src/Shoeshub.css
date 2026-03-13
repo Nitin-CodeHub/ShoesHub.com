@@ -185,8 +185,7 @@ footer{
   display: flex;
   height:auto ;
   width: 100%; 
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .footer-link ,.community{
   display: flex;
@@ -196,7 +195,7 @@ footer{
   padding: 2rem;
 }
 
-.footer-link ul ,.community ul {
+.footer-link ul , .community ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
