@@ -148,11 +148,12 @@ header .search {
   font-size: 2.5rem;
   background: transparent;
   color: #fff;
+  padding:0.2rem 0.7rem;
   border: none;
   cursor: pointer;
 }
 .close-btn:hover{
-  color:red ;
+ background-color: rgba(252, 30, 30, 0.627) 
 }
 .panel .panel-links {
   list-style: none;
