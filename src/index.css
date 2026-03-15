@@ -37,7 +37,7 @@
     gap: 1rem;
     background-color: #e2e7e6;
     text-align: center;
-    justify-content: flex-start;
+    justify-content: space-around;
     padding: 1rem 1rem;
     flex-wrap: wrap;
 }
@@ -45,7 +45,6 @@
 .box {
     background-color: white;
     padding-top: 10px;
-    width: 23%;
 }
 .shop-section h2{
     font-size: 1rem;
@@ -78,11 +77,12 @@
 
     @media(max-width:400px) {
         .shop-section{
-            flex-wrap;
+            justify-content: center;
         }
         .box {
-            width:80vw;
+           width: fit-content;
             margin: 10px 10px;
+            justify-content: center;
         }
     }
 
