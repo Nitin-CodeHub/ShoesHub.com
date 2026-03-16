@@ -3,28 +3,164 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nitin | About Me</title>
+
+    <!-- Google Font (FIXED) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* CARD */
+        .about-container {
+            background-color: #1e293b;
+            padding: 50px;
+            border-radius: 14px;
+            max-width: 720px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p,
+        h1,
+        a {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+
+            font-size: 2.6rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .location {
+            font-size: 1rem;
+            color: #94a3b8;
+            margin-bottom: 35px;
+        }
+
+        .bio-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .bio-section strong {
+            color: #38b2ac;
+            font-weight: 600;
+        }
+
+        /* LINKS */
+        .links-section {
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #25aca5fb;
+            color: #0f172a;
+            padding: 14px 34px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #6cb9b8;
+            transform: translateY(-2px);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .about-container {
+                padding: 35px 25px;
+            }
+
+            h1 {
+                font-size: 2.1rem;
+            }
+
+            .cta-button {
+                padding: 5px 20px;
+                font-size: 0.9rem;
+            }
+
+            .bio-section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <div style="font-family: Sans-serif ;background-color:rgb(248,249,250);padding:18px;color:black"><br>
-        <h2 style="font-family: Sans-serif ;color:black;">About Us !</h2>
-        <h2 style="font-family: Sans-serif ;text-align: center;">Welcome To <span id="W_Name1">Shoes hub</span></h2>
-        <p><span id="W_Name2">Shoes hub</span> is a Professional <span id="W_Type1">shoes ecommerce</span> Platform.
-            Here we will only provide you with interesting content that you will enjoy very much. We are committed to
-            providing you the best of <span id="W_Type2">shoes ecommerce</span>, with a focus on reliability and <span
-                id="W_Spec">blog</span>. we strive to turn our passion for <span id="W_Type3">shoes ecommerce</span>
-            into a thriving website. We hope you enjoy our <span id="W_Type4">shoes ecommerce</span> as much as we enjoy
-            giving them to you.</p>
-        <p>I will keep on posting such valuable anf knowledgeable information on my Website for all of you. Your love
-            and support matters a lot.</p>
-        <p style="font-weight: bold; text-align: center;">Thank you For Visiting Our Site<br><br>
-            <span style="color: blue; font-size: 16px; font-weight: bold; text-align: center;">Have a great day !</span>
-        </p>
-    </div><br><br>
+    <main class="about-container">
+        <header>
+            <h1>Hello, Dear.</h1>
+            <p class="location">ShoesHub A shoes E-commerce site based in India.</p>
+        </header>
+
+        <section class="bio-section">
+            <p>
+                Welcome to <strong>ShoesHub.com</strong>
+            </p>
+            <p>
+                ShoesHub is a Professional shoes ecommerce Platform. Here we will only provide you with interesting
+                content that you will enjoy very much. We are commited to providing you the best of shoes ecommerce ,
+                with a focus on reliability and blog.we strive to turn our passion for shoes ecommerce into a thriving
+                website. We hope you enjoy our shoes ecommerce as much as we enjoy giving them to you.I will keep on
+                posting such valuable anf knowledgeable information on my Website for all of you. Your love and support
+                matters a lot.
+            </p>
+            <strong>Thank you for visiting our Site </strong>
+            <strong>Have a great day!</strong>
+        </section>
+
+        <section class="links-section">
+            <a href="./shop.html" class="cta-button">Shop Now</a>
+            <a href="../index.html" class="cta-button">
+               Return to home</a>
+        </section>
+    </main>
 
 </body>
 

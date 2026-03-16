@@ -32,19 +32,38 @@
     margin-bottom: 5px;
 }
 
+.main{
+      display: flex;
+      padding: 1rem auto;
+    }
 .shop-section {
+    animation: fadeIn 1s ease-in-out;
     display: flex;
     gap: 1rem;
     background-color: #e2e7e6;
     text-align: center;
-    justify-content: space-around;
-    padding: 1rem 1rem;
+    padding: 1rem 0.5rem;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
+ @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
 
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 .box {
     background-color: white;
     padding-top: 10px;
+    margin: 10px auto;
+
 }
 .shop-section h2{
     font-size: 1rem;
@@ -60,12 +79,11 @@
 }
 
 .box-image {
-    aspect-ratio: 1.2/1;
+    aspect-ratio: 1.1/1;
     height: 90px;
     background-size: contain;
     background-repeat: no-repeat;
     margin-top: 1rem; 
- 
 }
 
 .box:hover {
@@ -78,6 +96,7 @@
     @media(max-width:400px) {
         .shop-section{
             justify-content: center;
+            padding: 1rem auto;
         }
         .box {
            width: fit-content;

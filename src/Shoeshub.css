@@ -14,6 +14,7 @@ body {
   color: #222;
   min-height: 100vh;
   scroll-behavior: smooth;
+  
 
 }
 
@@ -453,6 +454,7 @@ footer a {
       display: flex;
       flex-direction: column;
     }
+    
 
     footer .footer-start {
       flex-direction: column;
