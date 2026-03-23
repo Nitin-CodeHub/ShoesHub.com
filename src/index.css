@@ -89,9 +89,9 @@ button {
     padding: 20px;
     overflow: auto;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-    display: none;
-    
+    display: none;   
 }
+
 
   .cart {
         max-height: 80vh; /* Screen ki height ka 80% */
