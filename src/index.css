@@ -84,7 +84,6 @@ button {
     right: 0;
     top: 5rem;
     height: 100%;
-max-height: fit-content;
     width: 350px;
     background: rgba(255, 255, 255, 0.938);
     padding: 20px;
@@ -93,6 +92,12 @@ max-height: fit-content;
     display: none;
     
 }
+
+  .cart {
+        max-height: 80vh; /* Screen ki height ka 80% */
+        overflow-y: auto; /* Agar content zyada ho to scroll bar dikhaye */
+        -webkit-overflow-scrolling: touch; /* iOS par smooth scrolling ke liye */
+    }
 
 .cart-item {
     border-bottom: 1px solid #ddd;
