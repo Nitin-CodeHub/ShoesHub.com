@@ -84,12 +84,14 @@ button {
     right: 0;
     top: 5rem;
     height: 100%;
+max-height: fit-content;
     width: 350px;
     background: rgba(255, 255, 255, 0.938);
     padding: 20px;
     overflow: auto;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
     display: none;
+    
 }
 
 .cart-item {
