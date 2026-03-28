@@ -283,6 +283,7 @@ footer {
 .link a:hover {
   background: #2563eb;
   color: #fff;
+  font-weight: 700;
   transform: translateY(-3px);
 }
 
