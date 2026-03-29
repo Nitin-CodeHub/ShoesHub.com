@@ -27,6 +27,7 @@ btn.addEventListener("click", function () {
 const card = this.parentElement;
 
 const name = card.querySelector(".product-name").innerText;
+const product-image = cart.querySelector(".product-image").innerHTML;
 
 const price = parseFloat(card.querySelector(".product-price").innerText);
 
@@ -88,7 +89,7 @@ div.classList.add("cart-item");
 div.innerHTML = `
 <p>${item.name}</p>
 <p>₹${item.price}</p>
-
+<span>{item.product-image}</span>
 <button onclick="changeQty(${index},-1)">-</button>
 <span class="qty">${item.qty}</span>
 <button onclick="changeQty(${index},1)">+</button>
